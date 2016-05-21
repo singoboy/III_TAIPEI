@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>02checkMobile.html</title>	
+		<script>
+        function check(){
+       // var	 theMobileObj =  mobile.value ;
+        var theMobileObj = document.getElementById('mobile');	
+        	if(isNaN(theMobileObj) ){
+        		alert("please input number") ;
+        	}
+        	else{
+        		alert("Is number");
+        	}
+        }
+        function checkMobile(){
+        	var theMobileObj = document.getElementById('mobile');
+        //	var theMobileObj = document.getelementById('mobile');  //error spell word  document.getelementById is not a function
+        	alert(theMobileObj);
+        	var theMobileValue=theMobileObj.value;
+        	alert(theMobileValue);     	
+        	var theMobile=document.getElementById('mobile').value;
+        	alert(theMobile);
+        }
+        
+        function check2(){
+        	//var theMobile = document.getElementsByName("txtMobile")[0].value ;
+      //  	var theMobile = document.myform.txtMobile.value ;
+        	var theMobile = document.forms[0].txtMobile.value ;
+        	alert(theMobile);
+        }
+        
+		</script>	
+	</head>
+
+	<body>
+		<form name="myform">
+		Mobile Number:<input id="mobile" type="text" size="10" maxlength="10"  name="txtMobile" ><br>
+		<input  type="button" value="check" onclick="check();" >
+		</form>
+	</body>
+</html>

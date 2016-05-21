@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>07arrayObject.html</title>	
+		<script>
+			//array declare -1
+            var balls=new Array();
+            //alert(balls.length);
+            // balls[0]="basketball";
+            // balls[1]="baseball";
+            // balls[2]="tennis";
+            // balls[3]="volleyball";
+            // balls[4]=123;
+            // alert(balls.length);
+            document.write(balls);
+            //[]array literal
+            //{}object literal
+//            var balls= new Array("basketball","baseball","tennis","volleyball",123);
+            var balls=["basketball","baseball","tennis","volleyball",123];
+            document.write("join('-')="+balls.join("-")+"<br>");
+            document.write("reverse().join('=>')="+balls.reverse().join("=>")+"<br>");
+            document.write("sort()="+balls.sort()+"<br>");
+            
+            for(var i=0;i<balls.length;i++){
+            	document.write("balls["+i+"]"+balls[i]+"<br>");
+            }
+            document.write("<hr>");
+            /* for(variable in array || object) */
+           for(var obj in balls){
+           	document.write("balls["+obj+"]="+balls[obj]+"<br>");
+           }
+            
+		</script>	
+	</head>
+
+	<body>
+		
+	</body>
+</html>

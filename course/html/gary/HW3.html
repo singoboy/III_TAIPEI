@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<script>
+		
+			window.onload = function () {
+				var startt = document.getElementsByTagName("img");
+    for (var i = 0; i < startt.length; i++) {
+        startt[i].onmouseover = function () { mouseOver(this.id); };
+        startt[i].onmouseout = function () { mouseOut(this.id); };
+        startt[i].onclick = function () { Click(this.id); };
+    }
+};
+function mouseOver(satrid) {
+    
+        
+        for (var n = 1; n <= satrid.substr(3) ; n++)
+            document.getElementById("Img" + n).src = "img/chngstar.gif";
+   
+	document.getElementById("out").innerHTML =  satrid.substr(3)+ "顆星";
+}
+function mouseOut(satrid) {
+   
+        var startt = document.getElementsByTagName("img");
+        for (var i = 1; i <= startt.length; i++)
+            document.getElementById("Img" + i).src = "img/star.gif";
+   
+    
+}
+		</script>
+	</head>
+<body>
+	<img id="Img1" src="img/star.gif" />
+                        <img id="Img2" src="img/star.gif" />
+                        <img id="Img3" src="img/star.gif" />
+                        <img id="Img4" src="img/star.gif" />
+                        <img id="Img5" src="img/star.gif" />
+                        <div id="out">
+                        點擊評分
+                    </div>
+                  
+</html>		

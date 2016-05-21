@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+    <head>             
+	<title>05createOptionObject.html</title>
+    <script type="text/javascript">
+        window.onload=function(){
+            for (i = 2010 ; i <= 2020; i++) {   //新增年 
+                var opt = window.document.createElement("option");
+                opt.setAttribute("value",i);
+                var optName=document.createTextNode(i);
+                opt.appendChild(optName);
+                
+                // opt.value = i;
+                // opt.innerHTML = i;
+                document.getElementById('idSelectMonth').appendChild(opt);
+            }         	
+        	
+        	
+        	
+        	
+            for (i = 1; i <= 12; i++) {   //新增月 
+                var opt = window.document.createElement("option");
+                opt.setAttribute("value",i);
+                var optName=document.createTextNode(i);
+                opt.appendChild(optName);
+                
+                // opt.value = i;
+                // opt.innerHTML = i;
+                document.getElementById('idSelectMonth').appendChild(opt);
+            }  
+            
+            var d =new Date(2016,2,0); 
+
+        } ;
+	</script>
+	</head>
+	<body>
+		<select id="idSelectMonth"></select>
+		<select>
+			<option value="1">A</option>
+			<option value="2">B</option>
+			<option value="3">C</option>
+		</select>	
+	</body>
+</html>
+

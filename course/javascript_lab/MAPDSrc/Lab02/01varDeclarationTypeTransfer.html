@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>01varDeclarationTypeTransfer.html</title>	
+		<script>
+		var a=10;
+		document.write("a="+a +" typeof(a)="+typeof(a) + "<br>");  //自動轉型
+		a='abc';
+		document.write("a="+a +" typeof(a)="+typeof(a) + "<br>");  //自動轉型
+		var b="abc";
+		document.write("b="+b +" typeof(b)="+typeof(b) + "<br>");  //自動轉型
+		var c=true;
+		document.write("c="+c +" typeof(c)="+typeof(c) + "<br>");  //自動轉型
+		document.write("Boolean(c)="+Boolean(c)  + "<br>");  //自動轉型
+		var d=null;
+		document.write("d="+d +" typeof(d)="+typeof(d) + "<br>");  //自動轉型
+		document.write("Boolean(d)="+Boolean(d)  + "<br>");  //自動轉型
+		var e;
+		document.write("e="+e +" typeof(e)="+typeof(e) + "<br>");  //自動轉型		
+		document.write("Boolean(e)="+Boolean(e)  + "<br>");  //自動轉型	
+		var f =new Object();
+		document.write("f="+f +" typeof(f)="+typeof(f) + "<br>");  //自動轉型	
+		document.write("Boolean(f)="+Boolean(f)  + "<br>");  //自動轉型	
+		var g={a:10,b:"tt"};
+		document.write("g="+g +" typeof(g)="+typeof(g) + "<br>");  //自動轉型	
+		document.write("g.a="+g.a +" typeof(g.a)="+typeof(g.a) + "<br>");  //自動轉型	
+		document.write("g['b']="+g['b'] +" typeof(g['b'])="+typeof(g['b']) + "<br>");
+		
+		//object
+		var person =new Object();
+		person.name="kobe" ;
+        person.age=32;
+		person.id="f123322";
+		document.write(person.name+person['age']+"<br>");
+		
+		var cars ={label:"tmac",speed:200};
+		document.write(cars.label+cars['speed']+"<br>");
+		
+		document.write("parseInt('1234.56')="+parseInt('1234.56')+"<br>");
+		document.write("parseInt('123a.56')="+parseInt('123a.56')+"<br>");
+		document.write("parseInt('a234.56')="+parseInt('a234.56')+"<hr>");	
+		
+		document.write(" \"a+b\""+"<br>");
+		document.write('"a+b"');
+							
+
+			
+		
+		</script>	
+	</head>
+
+	<body>
+		
+	</body>
+</html>

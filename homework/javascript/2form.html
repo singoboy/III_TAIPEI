@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>table2</title>
+		<style>
+          fieldset{
+          	width: 600px;
+          	margin: 0 auto;
+            border: green 1px solid;
+          }   
+          #buttom{
+          	margin: 0 150px;         	
+          }
+          p{
+            color: #008866;
+          }
+		</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+                
+        $(function() {
+         
+          $( "#name" ).blur(function() {
+            checkName();
+          });
+          $( "#password" ).blur(function() {
+           checkPass();
+          });
+          $( "#date" ).blur(function() {
+          checkDate();
+          });                    
+         
+         
+         });
+         
+         function checkName(){  
+         var errName="";
+         var chineseFlag = false;	
+         var nameVal =	$("#name").val();
+         var nameLen = nameVal.length;
+
+         if(nameLen==0){
+         	errName+="輸入空白";
+         };
+         
+         if(nameLen<2){
+         	errName+="小於2";
+         };
+         
+         if(nameLen>=2){
+         chineseFlag =	checkChinese(nameVal) ;
+         
+         }
+         if(chineseFlag && errName.length==0){
+         	$("#nameSpa").html("<img style='width:20px;height:20px' src='correct.jpg'>正確");
+         	}
+         else  if(chineseFlag){ 
+         	$("#nameSpa").html("<img style='width:20px;height:20px' src='x.png'>"+errName);}
+         else{
+         	errName+="不是都漢字";
+         	$("#nameSpa").html("<img style='width:20px;height:20px' src='x.png'>"+errName);
+         	}
+         }
+         
+         function checkPass(){ 
+         	var errPass="";
+		    var englishFlag=false;
+		    var numFlag=false;
+		    var specFlag=false ;        	      	
+         	var passValue =$("#password").val() ;
+         	var passLength= passValue.length;
+            if(passLength == 0){
+             errPass+="輸入空白" ;
+            }
+            if(passLength < 6){
+               errPass+= "少於6";
+            }
+              
+            if(passLength >= 6){
+            for(var i=0;i<passLength;i++){
+            var passUpCase =	passValue.substr(i,1).toUpperCase();
+			 if(passUpCase>="A" && passUpCase<="Z"){
+						englishFlag=true;
+			 }            
+			if(passUpCase>="0" && passUpCase<="9"){
+						numFlag=true;
+		     }
+		     if(regclick(passUpCase)){
+		     	specFlag=true ;
+		     }
+		     
+		     
+            if(englishFlag&&numFlag&&specFlag){break ;} 			
+            }            
+            }
+            
+         if(englishFlag&&numFlag&&specFlag && errPass.length==0 ){	
+         	$('#passSpa').html("<img style='width:20px;height:20px' src='correct.jpg'>正確");}
+             else if( englishFlag&&numFlag&&specFlag  ){
+             	$('#passSpa').html("<img style='width:20px;height:20px' src='x.png'>"+errPass);
+             	}
+             else{
+             	errPass+= "缺少特殊字元,數字,英文字母其一";
+             	$('#passSpa').html("<img style='width:20px;height:20px' src='x.png'>"+errPass);
+             }
+
+         }
+         
+         function checkDate(){
+           alert("correct") ;     
+         }
+         
+         
+         function regclick(s){			
+          var regular = new RegExp('[!@#$%^&*]');
+          return (regular.test(s));
+         }
+         
+        function  checkChinese(s) {
+        	var checkFlag =true;
+            for(var i = 0; i < s.length; i++) {
+            if(s.charCodeAt(i) < 0x4E00 || s.charCodeAt(i) > 0x9FA5) {
+           //     alert("輸入非中文，請重新輸入"); 
+                checkFlag =false;
+                break;
+             }
+             
+            }
+            return checkFlag;
+         }         
+       
+       function checkDateFun(d){
+       	
+       }  
+         
+        </script>
+	</head>
+
+	<body>
+	<fieldset>	
+	<legend>Form Check</legend>	
+    <form method="get">
+    	
+    姓名：<input type="text" id="name" name="name"><span id="nameSpa"></span>
+    <p>1不可空白2至少兩個字以上3必須全部為中文字</p>
+    <hr>
+    密碼：<input type="password" id="password" name="password"><span id="passSpa"></span>
+    <p>1不可空白2至少六個字且必須包含英文，數字，特殊字元[!@#$%^&*]</p>
+    <hr>
+    日期：<input type="date" id="date" name="date"><span id="dateSpa"></span>
+    <hr>
+    <div id="buttom">
+    <input type="submit" value="送出" `>
+    <input type="reset" value="清除">
+    </div>	
+    </form>
+    </fieldset>
+	</body>
+</html>

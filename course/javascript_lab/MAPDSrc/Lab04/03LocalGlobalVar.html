@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>03LocalGlobalVar.html</title>
+		<script>
+		 var a=100;
+		// a=100;
+			function f(){
+			//	var a =10 ;  //local variable
+				a= 1000; //global variable
+                document.write("function in a="+a+"<hr>");
+			}
+		 document.write("function out  before call a="+a+"<hr>");
+			f();
+		 document.write("function out  after call a="+a+"<hr>");
+		 
+		 for( i=1;i<10;i++){
+		 	
+		 }
+		 document.write(i+"<hr>");
+		 document.write(typeof(f)+"<br>");  //function
+		// document.write(typeof(f()));  //undified
+		
+		</script>	
+	</head>
+
+	<body>		
+	</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+	<head>
+		<meta charset="utf-8" />
+		<title>list page </title>
+		<style>
+		a:link{
+			color:green;
+			text-decoration:none;
+		}
+		a:visited{color:gray}
+		a:hover{
+			color: #00079;
+			text-decoration:underline;
+		}
+		a:active{
+			font-size:80px;
+			color: red;
+		}
+		#menu li{
+			list-style-type:none;
+			list-style-image:url('images/a1.png');
+			
+		}
+		#menu1 li{
+			list-style-type:none;
+			list-style-image:url('images/a2.png');
+		}
+		#menu2 li{
+			list-style-type:none;
+			list-style-image:url('images/a3.png');
+		}
+		.in{
+			background-color: yellow;
+			list-style-position : inside ;
+		}
+		.out{
+			background-color: yellow;
+			list-style-position : outside ;
+		}
+		</style>
+<!--   <meta http-equiv="refresh" content="3;URL=secend.html">  -->
+	</head>
+	<body>
+		<br>
+		<ul>
+			<li>唐詩</li>
+			<li>宋詞</li>
+			<li>元曲</li>
+		</ul>	
+		<br>
+		<ul id="menu">
+			<li>唐詩</li>
+			<li>宋詞
+			    <ul id="menu1">
+			    	<li>床前明用光
+			    		<ol id="menu2">
+			    			<li class="in">一剪梅</li>
+			    			<li>如應令</li>
+			    			<li class="out">小異曲</li>	
+			    		</ol>	
+			    	</li>
+			    	<li>疑是地上霜</li>
+			    </ul>		
+			</li>
+			<li>元曲</li>
+		</ul>
+		<br>
+				<ul>
+			<li>唐詩</li>
+			<li>宋詞
+			    <ul>
+			    	<li>床前明用光</li>
+			    	<li>疑是地上霜</li>
+			    </ul>		
+			</li>
+			<li>元曲</li>
+		</ul>
+		<br>
+		<ol>
+			<li>就業養成班</li>
+			<li>軟體設計精修班</li>
+		</ol>
+		<hr>
+		<h3>台灣黑熊</h3>
+		<dl>
+			<dt>俗名:</dt>
+			<dd>狗熊,黑白熊</dd>
+			<dd>黑白熊</dd>
+			<dt>分類：</dt>
+			<dd>食肉科,熊科</dd>
+			<dt>分佈</dt>
+			<dd>全島一千公尺皆有分布</dd>
+		</dl>	
+		<br>
+	<a href="secend.html">secend.page</a>	
+	<hr>
+	<a href="http://www.yahoo.com.tw">yahoo</a>
+	<hr>
+	<a href="first/inside.html#book1">first/inside#book1</a>
+	<hr>
+	<a href="mailto:kobe@iii.org.tw">send mail</a>
+	<hr>
+	<img src="first/test.jpg">
+	<hr>
+	<img src="test.jpg" alt="this is kobe" title="tmac" width="200" height="400">
+	<hr>
+	<img src="first/test.jpg" alt="this is kobe" title="tmac" width="200" height="400">
+	<hr>
+	<h1>圖片超連結</h1>
+	<figure>
+	<figcaption>we are kobe </figcaption>	
+	<a href=""><img src="first/test.jpg" alt="this is kobe" title="tmac" width="200" height="400"></a>
+    </figure>
+    
+</body>
+</html>

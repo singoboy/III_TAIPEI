@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>02checkMobile.html</title>	
+		<script>
+        function check(){
+        	if(isNaN(mobile.value) ){
+        		alert("please input number") ;
+        	}
+        	else{
+        		alert("Is number");
+        	}
+        }
+		</script>	
+	</head>
+
+	<body>
+		Mobile Number:<input id="mobile" type="text" size="10" maxlength="10"><br>
+		<input  type="button" value="check" onclick="check();" >
+	</body>
+</html>

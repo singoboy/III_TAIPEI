@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>04checkEmail.html</title>	
+		<script>
+			function chk(){
+				var thePwd =document.getElementById("idPwd").value;
+				var thePwdLen = thePwd.length;
+				var flag1=false,flag2=false,flag3=false ;
+				
+				if(thePwd==""){
+					alert("you must been enter");
+				}
+				else if(thePwdLen>=6){
+					//alert(">6");
+					for(var i=0;i<thePwdLen;i++){
+					var thePwdChr =	thePwd.substr(i,1).toUpperCase();
+					console.log("thePwdChr"+thePwdChr);
+					
+					if(thePwdChr>="A" && thePwdChr<="Z"){
+						flag1=true;
+					}
+					if(thePwdChr>="0" && thePwdChr<="9"){
+						flag2=true;
+					}
+					if(true){
+						//檢查特殊符號
+					}
+					if(flag1&&flag2){
+						break ;
+					}
+					}
+					if(flag1 && flag2){
+						alert("correct");
+					}
+                else{
+						alert("incorrect");
+					}
+					
+				}
+				else{
+					alert("password length than greater 6");
+				}
+			    
+			}
+			function text(){
+				$("idsp").html("<img src='stop.jpeg'>you must be enter");
+			} 
+		</script>	
+	</head>
+
+	<body>
+	    Password:<input type="text" id="idPwd" size="6"/><span id="idsp">span</span><br/>
+		Email:<input type="text" id="idEmail" size="30" maxlength="30"/><br/>		
+		<input type="button" value="check" onclick="chk();"/>
+		
+	</body>
+</html>

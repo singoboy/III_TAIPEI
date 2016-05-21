@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>01ad.html</title>
+		<style>
+        img{
+        	width: 300px;
+        	height: 200px;
+        }
+        #div1{
+        	width: 400px;
+        	height: 400px;
+        	margin: 20px auto ;
+        }
+        #div2{
+            width: 400px;
+            height: 10px;
+          	margin: 20px auto ;
+        }
+        span{
+        	color: red;
+        }
+
+		</style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+        $(function() {
+            $( "#stop" ).click(function() {
+            window.clearInterval(t);
+            });
+             $( "#star" ).click(function() {
+            t=window.setInterval(changeImg,1000) ;
+            });
+
+        });
+		
+		
+        var number= 1 ;
+        var total = 4 ;
+        var imgs = document.getElementsByTagName("img"); //拿到的是標籤物件
+        var spans = document.getElementsByTagName("span"); //拿到的是標籤物件
+        var t=window.setInterval(changeImg,1000) ;
+		
+        function changeImg(){
+        if(number==( total+1)){ number=1 ;}   
+         var position = number-1  ;
+         var max =  total -1;
+
+         imgs[0].src= "00"+number+".jpg"  ;
+
+         for(i=0;i<=max;i++){
+            if(i==position)  { 
+            spans[position].style.color='green';
+            }
+            else{
+            spans[i].style.color='red';    
+            }
+         }
+         number++;
+        }
+
+		</script>	
+	</head>
+
+	<body>
+	<div id="div1" ><img id="show" src="001.jpg"><br>
+	   
+    <div id="div2">
+    <span id="s1">1</span>  <span id="s2">2</span>  <span id="s3">3</span>  <span id="s4">4</span>
+    <div>
+	</div>
+    <p><p>
+    <input type="button" id="stop" value="stop">  <input id="star" type="button" value ="star">
+
+	</body>
+</html>

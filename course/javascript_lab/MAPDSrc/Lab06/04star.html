@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>04eventHandlerMouseoverout.html</title>
+        <script>
+            window.onload = function () {
+                document.getElementById("idimg").onmouseover = mouseover;
+                document.getElementById("idimg").onmouseout = mouseout;
+
+            };
+
+        	function mouseover() {
+               document.getElementById("idimg").src="Images/chngstar.gif";
+            }
+
+        	function mouseout() {
+               document.getElementById("idimg").src="Images/star.gif";
+            }
+    </script>
+</head>
+<body>
+    <img id="idimg" src="Images/star.gif" />
+</body>
+</html>

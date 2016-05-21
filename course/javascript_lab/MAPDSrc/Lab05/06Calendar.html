@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>06Calendar.html</title>
+		<script src="Calendar/Compact/CalendarPopup.js"></script>
+		<script>
+			var cal = new CalendarPopup();
+		</script>	
+	</head>
+
+
+<body>
+	<form>
+		date:<input type="text" id="date" >
+		<a href="#" id="anchorname" onclick="cal.select(document.forms[0].date,'anchorname','MM/dd/yyyy'); return false;">Select</a>
+		
+			
+	</form>
+	<hr>
+	<a href="www.yahoo.com">yahoo</a>
+	<hr>
+	<a href="#">self</a>
+</body>
+</html>

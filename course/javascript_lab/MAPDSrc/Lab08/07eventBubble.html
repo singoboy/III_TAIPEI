@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>07eventBubble.html</title>	
+		<script>
+           window.onload=function(){
+                document.onmousedown=mouseDownDoc;
+                document.getElementById("iddiv").onmousedown=mouseDownDiv;
+                document.getElementById("idp").onmousedown=mouseDownP;
+            };
+            
+            function mouseDownDoc(nsEvent){
+              alert("document");
+            }
+            
+            function mouseDownDiv(nsEvent){
+              alert("div");
+              if(nsEvent.stopPropagation()){
+              nsEvent.stopPropagation();
+              }            
+     
+          }
+          function mouseDownP(nsEvent){
+              alert("ppp");
+          }
+		</script>	
+	</head>
+   test line
+	<body>
+		<div id="iddiv">
+			div
+			<p id="idp">ppppp</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>05eventObject.html</title>	
+		<script>
+	/*	
+           document.onmousedown=mouseDown;
+           function mouseDown(){           //IE8     
+               alert(event.type);
+               alert(event.button);               
+           }
+           function mouseDown(nsevent){          //FIREFOX IE9以上     
+               alert(nsevent.type);
+               alert(nsevent.button);               
+           }
+     */      
+          
+           function keyDown(nsevent){
+               var theEvent=nsevent||window.event;
+               alert(theEvent);               
+               if(theEvent.type) alert(theEvent.type);
+               if(theEvent.button) alert(theEvent.button);
+           }
+          
+          
+          //跨瀏覽器
+          
+            //document.onkeydown=keyDown;  //大寫鍵,控制鍵
+           //document.onkeypress=keyDown; //大小寫鍵
+
+        document.onkeypress = keyDown;
+        function keyDown(nsevent) {
+            var theEvent = nsevent || window.event;
+            alert(theEvent.keyCode);
+            if (theEvent.altKey) alert("ALT");
+            if (theEvent.ctrlKey) alert("CTRL");
+            if (theEvent.shiftKey) alert("SHIFT");
+        }
+           
+          function bmouseDown(ns){
+          	alert("screenX="+ns.screenX+"\n"+
+          	      "clientX="+ns.clientX+"\n"+
+          	      "offsetX="+ns.offsetX+"\n"
+          	);
+          }
+           
+          
+		</script>	
+	</head>
+
+	<body>
+		
+		<!-- <input type="button" id="idbut" value="button"  />  -->
+		<input type="button" id="idbut" value="button"  onmousedown="bmouseDown(event);"/>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>02dynamicStyleImg.html</title>
+        <style>
+            .s {
+                -webkit-filter: grayscale(1);  /*灰色 */
+            
+            }
+            .n {
+                -webkit-filter: grayscale(0);
+            }
+        </style>
+        <script>
+            window.onload = function () {
+                document.getElementById("idstar").onmouseover = mouseOver;
+                document.getElementById("idstar").onmouseout = mouseOut;
+            };
+        	function mouseOver() {
+
+                document.getElementById("idstar").className = "n";
+            }
+        	function mouseOut() {
+                document.getElementById("idstar").className = "s";
+            }
+        </script>
+</head>
+<body>
+    <img id="idstar" src="Images/star.jpg" class="s" />
+</body>
+</html>

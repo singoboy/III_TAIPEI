@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>08eventObjectDemo.html</title>	
+		<script>
+			document.oncontextmenu=function(){
+				event.preventDefault();   //取消右鍵功能
+			};
+		</script>	
+	</head>
+  
+	<body>
+		this is test line<br/>
+		<img src="WindowObject/image/101.gif"/>
+		<a href="http://www.google.com" onclick="return false;">google</a>
+		<a href="http://www.google.com" onclick="event.preventDefault();">google</a>
+		<a href="http://www.google.com" >google</a>
+		<!-- return false  ==  event.preventDefault() -->
+		<a href="http://www.google.com" onclick="return true;">google</a>
+		
+		<br><br><br>
+		
+	</body>
+</html>

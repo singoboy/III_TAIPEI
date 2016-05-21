@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head>             
+	<title>date.html</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script >
+       $(function() {   
+            for (i = 2010 ; i <= 2020; i++) {   //新增年 
+                var opt = window.document.createElement("option");
+                opt.setAttribute("value",i);
+                var optName=document.createTextNode(i);
+                opt.appendChild(optName);
+            
+                document.getElementById('idSelectYear').appendChild(opt);
+            }         	
+        	
+            for (i = 1; i <= 12; i++) {   //新增月 
+                var opt = window.document.createElement("option");
+                opt.setAttribute("value",i);
+                var optName=document.createTextNode(i);
+                opt.appendChild(optName);
+                
+                document.getElementById('idSelectMonth').appendChild(opt);
+            }  
+
+            $("#idSelectYear,#idSelectMonth").change(function(){
+               var yearValue = $('#idSelectYear option:selected').val() ;
+               var monthValue = $('#idSelectMonth option:selected').val() ;  
+               var dayValue = calculateDay(yearValue,monthValue);
+                optionDay(dayValue);
+                var daySelected = $('#idSelectDay option:selected').val() ;
+               $('#text').text("您選擇"+yearValue+"年"+monthValue+"月"+daySelected+"日");
+            
+            });
+
+              $("#idSelectDay").change(function(){
+               var yearValue = $('#idSelectYear option:selected').val() ;
+               var monthValue = $('#idSelectMonth option:selected').val() ;  
+                var daySelected = $('#idSelectDay option:selected').val() ;
+               $('#text').text("您選擇"+yearValue+"年"+monthValue+"月"+daySelected+"日");
+            
+            });
+
+            
+         });
+
+
+       function calculateDay(year , month){
+         var yearleap = judgeYear(year);
+         var day;
+        if(yearleap && month == 2)
+        {
+            day = 29;
+        }
+        else if(!yearleap && month == 2)
+        {
+            day = 28;
+        }
+        else if(month == 4 || month == 6 || month == 9 || month == 11)
+        {
+            day = 30;
+        }
+        else
+        {
+            day = 31;
+        }
+        return day;
+
+       }
+
+       function judgeYear(year){
+        var yearleap = (year % 400 == 0) || (year % 4 == 0) && (year % 100 != 0);
+        return yearleap ;
+       }
+        
+       function optionDay(p){
+           $('#idSelectDay option').remove();
+           for (i = 1; i <= p; i++) {
+                var opt = window.document.createElement("option");
+                opt.setAttribute("value",i);
+                var optName=document.createTextNode(i);
+                opt.appendChild(optName);
+                 document.getElementById('idSelectDay').appendChild(opt);
+            } 
+      }
+	</script>
+	</head>
+	<body>
+		<select id="idSelectYear"></select> 年
+		<select id="idSelectMonth" ></select> 月	
+        <select id="idSelectDay" ></select>   日
+        <br>
+        <h1 id="text"> </h1> 
+	</body>
+</html>
+

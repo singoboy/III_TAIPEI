@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>table2</title>
+		<style>
+          table{
+            width: 300 px;
+            border: 2px     #7700BB solid ;
+            background-color:  #33FFDD;
+            color: #A500CC;
+            margin: 20px auto ;
+          }
+            td,th{
+            border: 2px   #7700BB solid ;
+          }      
+		</style>
+        <script >
+        	document.write("<table><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th>");
+
+             for(x=2;x<=9;x++){
+             	document.write("<tr><td>"+x+"</td>");
+             	for(y=1;y<=9;y++){
+             		document.write("<td>"+x +"*" +y + "="+ x*y +"</td>");
+             		if(y==9){
+             			document.write("</tr>");
+             		}
+             	}
+             }
+
+           document.write("</table>");  
+        </script>
+
+	</head>
+
+	<body>
+    
+
+	</body>
+</html>

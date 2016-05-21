@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>04locationHref.html</title>	
+		<script>
+		var linked = new Array();
+		linked[0] ="#" ;   //連到自己
+		linked[1] = "http://www.liiedu.org.tw/taipei";
+		linked[2] = "http://www.yahoo.com.tw" ;
+		linked[3] = "http://www.google.com.tw";
+		
+		  function redirect(Index){
+		  	alert(Index);
+		  	console.log(linked[Index]);
+		  	location.href=linked[Index];
+		  }
+			
+		</script>	
+	</head>
+
+	<body>
+		<select onchange="redirect(this.selectedIndex);" > <!-- this = select 這個物件的內容 -->
+			<option>selected</option>
+			<option>IIIEDU</option>
+			<option>KIMO</option>
+			<option>GOOGLE</option>			
+		</select>
+	</body>
+</html>

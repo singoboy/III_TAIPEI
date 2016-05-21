@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>star</title>
+		<style>
+             
+		</style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+        var stars = document.getElementsByTagName("img"); //拿到的是標籤物件
+        
+       $(function() {    
+        for (var i = 0; i < stars.length; i++) {                 
+          stars[i].onmouseover = function () { mouseOver(this.id); };
+          stars[i].onmouseout =  function () { mouseOut(this.id); };
+          stars[i].onclick =     function () { Click(this.id); };
+         }       	
+       	 });
+
+         
+      function    mouseOver(s){
+       var index =  s.substring(4,5)-1;
+       for(var i= index ; i>-1 ;i--){
+       stars[i].src="chngstar.gif" ;
+       }
+       $( "#p1" ).text("打分中..."+s.substring(4,5));
+      } 
+      function    mouseOut(s){
+        var index =  s.substring(4,5)-1;
+       for(var i= index ; i>-1 ;i--){
+       stars[i].src="star.gif" ;
+       }                          
+       $( "#p1" ).text("打分中..."+"0"); 	
+      }
+      function    Click(s){
+      	var score = s.substring(4,5) ;
+        $( "#p1" ).text("您得" + score +"幾顆星");    
+      }
+                    
+        </script>
+	</head>
+
+	<body>
+<img  id="star1" src="star.gif"><img id="star2" src="star.gif"><img id="star3" src="star.gif"><img id="star4" src="star.gif"><img id="star5" src="star.gif">
+<hr>
+
+<p id="p1" style="text-align:center;"> 打分中..0<p> 
+    
+    
+
+	</body>
+</html>

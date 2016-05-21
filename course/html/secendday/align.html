@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>table2</title>
+		    <link rel="stylesheet" href="style/st1.css"> 
+		<style>
+        table{
+        	border:3px solid green ;
+        	width:400px ;
+        	border-collapse: collapse; 
+        	margin :0 auto ;
+        }
+        td,th{
+        	border: 1px solid gray ;
+        	
+        }
+        thead{
+        	border-bottom: 3px double #aa7700;
+        	background-color: #007979;
+        	color: #ffffff;
+        }
+        tbody{
+        	background-color: #02F78E;
+        }
+        tbody tr:nth-child(2n) {background-color: #80FFFF;}
+        tbody tr:nth-child(2n+1) {background-color: #00CACA;}
+        tbody tr:hover {background-color: #ffffff;}  
+		</style>
+
+	</head>
+
+	<body>
+    <table>
+    	<caption><h3>表格練習</h3></caption>
+    	<thead>
+    	<tr><th>a</th><th>b</th><th>c</th><th>d</th></tr>
+    	<tr><th colspan="2">a</th><th colspan="2">c</th></tr>
+    	</thead>
+    	<tbody>
+    	<tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+    	<tr><td>1</td><td colspan="3">2</td></tr>
+    	</tbody>
+    	<tr><td >1</td><td>2</td><td>3</td><td>4</td></tr>
+    	<tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+    	<tfoot>
+    	<tr><td rowspan="3"  style="vertical-align: bottom">12345678</td><td>2</td><td>3</td><td>4</td></tr>	
+    	<tr><td>2</td><td>3</td><td>4</td></tr>
+    	<tr><td>2</td><td>3</td><td>4</td></tr>
+    	</tfoot>
+    	
+    </table>
+    <hr>
+    <h2 style="vertical-align: middle">aabbccss</h2>
+    <hr>
+    <div style="border: 1px solid red; width: 200px; text-align: center ;height:200px; line-height: 200px"  >文字垂直對齊 line-hight</div>	
+    <hr>
+    <div style="border: 1px solid red; width: 200px; text-align:center ;padding-top:50px;padding-bottom: 50px">文字垂直對齊 padding</div>	
+	</body>
+</html>

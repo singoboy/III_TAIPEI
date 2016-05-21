@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>01functionMethod.html</title>	
+		<script>
+			//Method 1
+        function fAdd1(a,b){
+			return (a+b);
+		}
+		var r=fAdd1(10,20);
+		document.write("r="+r+"<hr>");	
+		document.write("fAdd1="+fAdd1+"<hr>") ;	
+		document.write("fAdd1(10,20)="+fAdd1(10,20)+"<hr>") ;	
+			//Method 2
+		
+		//var fAdd2=fAdd1;		
+		var fAdd2 = function(a,b){
+            return(a+b);
+		}
+		
+		document.write("fAdd2="+fAdd2+"<hr>") ;	
+		document.write("fAdd2(10,50)="+fAdd2(10,50)+"<hr>") ;
+		document.write(window.alert+"<hr>") ;
+		document.write(window.alertx+"<hr>") ;
+		document.write(window.alert("2")+"<hr>") ;
+		
+		if(window.alert){
+			document.write("true");
+		}
+		else{
+			document.write("false");
+		}
+		
+			
+			
+			
+		</script>	
+	</head>
+
+	<body>
+		
+	</body>
+</html>

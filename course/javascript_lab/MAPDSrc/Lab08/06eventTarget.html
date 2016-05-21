@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>06eventTarget.html</title>	
+		<script>
+		  window.onload=function(){
+		      document.getElementById("idp").onclick=clickP;
+		      document.getElementById("idbut").onclick=clickBut;     	      
+		  };
+		  
+		  function clickP(){
+		     // alert("p");
+		      alert("p target="+event.target);
+		  }
+           
+          function clickBut(){
+             // alert("button");
+              alert("button target="+event.target);
+              
+          }                                  
+		</script>	
+	</head>
+
+	<body>
+		<p id="idp">
+             <input type="button" id="idbut" value="button" />            
+        </p>
+	</body>
+</html>

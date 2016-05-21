@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>star</title>
+		<style>
+             
+		</style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+        $(function() {
+        $( "#star1" ).mouseover(function() {
+         inStar1();
+         });
+        $( "#star2" ).mouseover(function() {
+         inStar2();
+         });         
+        $( "#star3" ).mouseover(function() {
+         inStar3();
+         });
+        $( "#star4" ).mouseover(function() {
+         inStar4();
+         });
+        $( "#star5" ).mouseover(function() {
+         inStar5();
+         }); 
+         /*             */        
+         $( "#star1" ).mouseout(function() {
+          outStar1();
+         });    
+         $( "#star2" ).mouseout(function() {
+          outStar2();
+         }); 
+         $( "#star3" ).mouseout(function() {
+          outStar3();
+         }); 
+         $( "#star4" ).mouseout(function() {
+          outStar4();
+         }); 
+         $( "#star5" ).mouseout(function() {
+          outStar5();
+         });                                         
+         /*     */
+         $( "#star5"  ).click(function() {
+             alert( "你得五顆星" ); 
+          });
+                                   
+         });
+         
+         function inStar1(){
+         	$( "#star1" ).attr('src', "chngstar.gif");
+         	$( "#score" ).text('1');
+         }
+         function inStar2(){
+         	$( "#star1" ).attr('src', "chngstar.gif");
+         	$( "#star2" ).attr('src', "chngstar.gif");
+         	$( "#score" ).text('2');
+         }
+         function inStar3(){
+         	$( "#star1" ).attr('src', "chngstar.gif");
+         	$( "#star2" ).attr('src', "chngstar.gif");
+         	$( "#star3" ).attr('src', "chngstar.gif");
+         	$( "#score" ).text('3');         	
+         }
+         function inStar4(){
+         	$( "#star1" ).attr('src', "chngstar.gif");
+         	$( "#star2" ).attr('src', "chngstar.gif");
+         	$( "#star3" ).attr('src', "chngstar.gif");
+         	$( "#star4" ).attr('src', "chngstar.gif");
+         	$( "#score" ).text('4');         	
+         }
+         function inStar5(){
+         	$( "#star1" ).attr('src', "chngstar.gif");
+         	$( "#star2" ).attr('src', "chngstar.gif");
+         	$( "#star3" ).attr('src', "chngstar.gif");
+         	$( "#star4" ).attr('src', "chngstar.gif");
+         	$( "#star5" ).attr('src', "chngstar.gif");
+         	$( "#score" ).text('5');           	
+         }	
+         
+         function outStar1(){
+         	$( "#star1" ).attr('src', "star.gif");
+         	$( "#score" ).text('0');  
+         }
+         function outStar2(){
+         	$( "#star1,#star2" ).attr('src', "star.gif");
+         	$( "#score" ).text('0');           	
+         }
+         function outStar3(){
+         	$( "#star1,#star2,#star3").attr('src', "star.gif");
+         	$( "#score" ).text('0');            	
+         }
+         function outStar4(){
+         	$( "#star1,#star2,#star3,#star4" ).attr('src', "star.gif");
+         	$( "#score" ).text('0');            	
+         }
+         function outStar5(){
+         	$(  "#star1,#star2,#star3,#star4,#star5" ).attr('src', "star.gif");
+         	$( "#score" ).text('0');            	
+         }
+        </script>
+	</head>
+
+	<body>
+<img  id="star1" src="star.gif"><img id="star2" src="star.gif"><img id="star3" src="star.gif"><img id="star4" src="star.gif"><img id="star5" src="star.gif">
+<hr>
+
+<p style="text-align:center;"> 打分中..<span id="score">0</span><p> 
+    
+    
+
+	</body>
+</html>

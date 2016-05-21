@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>08formObject.html</title>	
+		<script>
+		window.onload=function(){
+			document.getElementById("idbutton").onclick = fcheck;
+            document.getElementById("idsubmit").onclick = submitf;
+			
+			function fcheck(){
+			var eles = document.forms[0].elements;
+			var elesLen = eles.length ;
+			//alert(elesLen);
+			for(var i=0 ;i<elesLen;i++ ){
+				alert(eles[i].tagName);
+				if(eles[i].checked){
+					alert(eles[i].value);
+				}
+			}	
+			}
+			
+        function submitf() {
+            if (document.getElementById("txtName").value == "")
+                document.getElementById("idsp").innerHTML = "not blank";
+     //    document.getElementById("idName").insertAdjacentHTML("AfterEnd", "not blank");
+            else
+                document.forms[0].submit();
+        }
+
+			
+		}	;
+		</script>	
+	</head>
+  
+	<body>
+		<form action="get.php" method="get">
+			name:<input type="text" name="txtName" value="abc" id="txtName" /><span id="idsp"></span><br/>
+			<input type="checkbox" name="hobby" checked="checked" value="reading">reading
+			<input type="checkbox" name="hobby" value="game">game
+			<input type="checkbox" name="hobby" value="sleep">sleep
+			<br/>
+			<input type="submit" value="送出" />
+			<input id="idbutton" type="button" value="check" />
+            <input id="idsubmit" type="button" value="submit" />
+		</form>
+	</body>
+</html>
