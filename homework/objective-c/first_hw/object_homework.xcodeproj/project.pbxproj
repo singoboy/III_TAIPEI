@@ -15,6 +15,7 @@
 		47A23A541CF6E03F00D4EE01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A23A521CF6E03F00D4EE01 /* LaunchScreen.storyboard */; };
 		47A23A5F1CF6E03F00D4EE01 /* object_homeworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A23A5E1CF6E03F00D4EE01 /* object_homeworkTests.m */; };
 		47A23A6A1CF6E03F00D4EE01 /* object_homeworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A23A691CF6E03F00D4EE01 /* object_homeworkUITests.m */; };
+		4EA4B6271D02A2730049CCF8 /* tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA4B6261D02A2730049CCF8 /* tool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		47A23A651CF6E03F00D4EE01 /* object_homeworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = object_homeworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A23A691CF6E03F00D4EE01 /* object_homeworkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = object_homeworkUITests.m; sourceTree = "<group>"; };
 		47A23A6B1CF6E03F00D4EE01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EA4B6251D02A2730049CCF8 /* tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tool.h; sourceTree = "<group>"; };
+		4EA4B6261D02A2730049CCF8 /* tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				47A23A521CF6E03F00D4EE01 /* LaunchScreen.storyboard */,
 				47A23A551CF6E03F00D4EE01 /* Info.plist */,
 				47A23A441CF6E03F00D4EE01 /* Supporting Files */,
+				4EA4B6251D02A2730049CCF8 /* tool.h */,
+				4EA4B6261D02A2730049CCF8 /* tool.m */,
 			);
 			path = object_homework;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				47A23A4C1CF6E03F00D4EE01 /* ViewController.m in Sources */,
 				47A23A491CF6E03F00D4EE01 /* AppDelegate.m in Sources */,
 				47A23A461CF6E03F00D4EE01 /* main.m in Sources */,
+				4EA4B6271D02A2730049CCF8 /* tool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +502,7 @@
 				47A23A701CF6E03F00D4EE01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		47A23A711CF6E03F00D4EE01 /* Build configuration list for PBXNativeTarget "object_homeworkTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +511,7 @@
 				47A23A731CF6E03F00D4EE01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		47A23A741CF6E03F00D4EE01 /* Build configuration list for PBXNativeTarget "object_homeworkUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +520,7 @@
 				47A23A761CF6E03F00D4EE01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

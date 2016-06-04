@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "tool.h"
 
 @interface ViewController ()
 
@@ -19,7 +20,7 @@
     
     
     
-    //第四題  1到100總和
+    //第一題  1到100總和
     int total = 0 ;
     for  (int i ;i<=100;i++ ){
         total = total + i ;
@@ -91,9 +92,58 @@
         printf("\n");
     }
     
+    //第四題 判斷6到15最小不是質數
+     // version 1  函數呼叫
+    int number;
+    for (int index = 6; index <= 15 ; index++ ){
+        if(judePrime(index)){
+            number = index;
+            break ;
+        }
+    }
+    NSLog(@"ver1 最小不是質數是 %d" , number);
+    
+     // version 2 物件方法呼叫
+    int number2;
+    tool  *obTool = [[tool alloc] init ] ;
+    for (int index = 6; index <= 15 ; index++ ){
+        if([obTool isNotPrime:index secondNumber:0]){
+            number = index;
+            break ;
+        }
+    }
+    NSLog(@"ver2 最小不是質數是 %d" , number);
+    
+    
+    //第五題 range
+    
+    int age = arc4random()%101 ;     // 年紀設定在 0~100
+    NSLog(@"age= %d" ,age);
+//  18...29,65...74:
+    if((18<=age&&age<=29)  ||(65<=age&&age<=74)){
+        NSLog(@"恭喜有補助 age = %d" ,age);
+    }
+    else{
+        NSLog(@"沒有補助 age = %d" ,age);
+    }
+    
+    
+    
     
     // Do any additional setup after loading the view, typically from a nib.
 }
+
+   bool judePrime(int a ){
+       int divisor = 2 ;
+       while(divisor < a)
+       {
+           if(a % divisor == 0){
+               return true ;
+           }
+           divisor++ ;
+       }
+       return false;
+   }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
